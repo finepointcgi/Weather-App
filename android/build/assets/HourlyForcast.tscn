@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://HourlyForcast.cs" type="Script" id=1]
+
+[node name="HourlyForcast" type="Control"]
+margin_top = 448.0
+margin_right = 600.0
+margin_bottom = 478.0
+rect_min_size = Vector2( 600, 30 )
+mouse_filter = 2
+script = ExtResource( 1 )
+
+[node name="HourTime" type="Label" parent="."]
+margin_left = 77.2535
+margin_right = 117.254
+margin_bottom = 36.0
+text = "5pm"
+
+[node name="Temp" type="Label" parent="."]
+margin_left = 317.48
+margin_right = 357.48
+margin_bottom = 36.0
+text = "Temp"
+
+[node name="TempValue" type="Label" parent="."]
+margin_left = 384.151
+margin_right = 424.151
+margin_bottom = 36.0
+text = "56"

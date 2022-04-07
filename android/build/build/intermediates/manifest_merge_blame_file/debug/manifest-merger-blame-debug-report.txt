@@ -1,0 +1,149 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.godotengine.weatherapp"
+4    android:installLocation="auto"
+5    android:versionCode="1"
+6    android:versionName="1.0" > <!-- glEsVersion is modified by the exporter, changing this value here has no effect. -->
+7    <uses-sdk
+8        android:minSdkVersion="30"
+9        android:targetSdkVersion="30" />
+10
+11    <supports-screens
+11-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:12:5-16:40
+12        android:largeScreens="true"
+12-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:15:9-36
+13        android:normalScreens="true"
+13-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:14:9-37
+14        android:smallScreens="true"
+14-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:13:9-36
+15        android:xlargeScreens="true" />
+15-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:16:9-37
+16
+17    <uses-feature
+17-->C:\Users\animeman\Documents\Weather App\android\build\src\debug\AndroidManifest.xml:10:5-78
+18        android:glEsVersion="0x00030000"
+18-->C:\Users\animeman\Documents\Weather App\android\build\src\debug\AndroidManifest.xml:10:19-51
+19        android:required="true" />
+19-->C:\Users\animeman\Documents\Weather App\android\build\src\debug\AndroidManifest.xml:10:52-75
+20
+21    <uses-permission android:name="android.permission.INTERNET" />
+21-->C:\Users\animeman\Documents\Weather App\android\build\src\debug\AndroidManifest.xml:11:5-67
+21-->C:\Users\animeman\Documents\Weather App\android\build\src\debug\AndroidManifest.xml:11:22-64
+22
+23    <instrumentation
+23-->C:\Users\animeman\Documents\Weather App\android\build\src\debug\AndroidManifest.xml:12:5-17:60
+24        android:name=".GodotInstrumentation"
+24-->C:\Users\animeman\Documents\Weather App\android\build\src\debug\AndroidManifest.xml:14:9-45
+25        android:icon="@mipmap/icon"
+25-->C:\Users\animeman\Documents\Weather App\android\build\src\debug\AndroidManifest.xml:15:9-36
+26        android:label="@string/godot_project_name_string"
+26-->C:\Users\animeman\Documents\Weather App\android\build\src\debug\AndroidManifest.xml:16:9-58
+27        android:targetPackage="org.godotengine.$genname" />
+27-->C:\Users\animeman\Documents\Weather App\android\build\src\debug\AndroidManifest.xml:17:9-57
+28    <!--
+29    You need to choose this two permissions from Export menu.
+30    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+31    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+32    -->
+33    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+33-->[LocationPlugin.debug.aar] C:\Users\animeman\.gradle\caches\transforms-3\03b66004eeaeb164c17298c9da4c1ec1\transformed\jetified-LocationPlugin.debug\AndroidManifest.xml:17:5-81
+33-->[LocationPlugin.debug.aar] C:\Users\animeman\.gradle\caches\transforms-3\03b66004eeaeb164c17298c9da4c1ec1\transformed\jetified-LocationPlugin.debug\AndroidManifest.xml:17:22-78
+34    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+34-->[LocationPlugin.debug.aar] C:\Users\animeman\.gradle\caches\transforms-3\03b66004eeaeb164c17298c9da4c1ec1\transformed\jetified-LocationPlugin.debug\AndroidManifest.xml:18:5-79
+34-->[LocationPlugin.debug.aar] C:\Users\animeman\.gradle\caches\transforms-3\03b66004eeaeb164c17298c9da4c1ec1\transformed\jetified-LocationPlugin.debug\AndroidManifest.xml:18:22-76
+35
+36    <application
+36-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:31:5-87:19
+37        android:allowBackup="false"
+37-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:31:68-95
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.2.0] C:\Users\animeman\.gradle\caches\transforms-3\f468396e8f36529b92fb98842a149f3b\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
+39        android:debuggable="true"
+40        android:extractNativeLibs="false"
+41        android:hasFragileUserData="false"
+41-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:31:118-152
+42        android:icon="@mipmap/icon"
+42-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:31:238-265
+43        android:isGame="true"
+43-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:31:96-117
+44        android:label="@string/godot_project_name_string"
+44-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:31:18-67
+45        android:requestLegacyExternalStorage="false" >
+45-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:31:153-197
+46        <activity
+46-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:59:9-81:20
+47            android:name="com.godot.game.GodotApp"
+47-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:60:13-37
+48            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
+48-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:66:13-141
+49            android:excludeFromRecents="false"
+49-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:64:13-47
+50            android:label="@string/godot_project_name_string"
+50-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:61:13-62
+51            android:launchMode="singleTask"
+51-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:63:13-44
+52            android:resizeableActivity="false"
+52-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:67:13-47
+53            android:screenOrientation="portrait"
+53-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:65:13-50
+54            android:theme="@android:style/Theme.Black.NoTitleBar" >
+54-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:62:13-66
+55            <intent-filter>
+55-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:73:13-80:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:74:17-69
+56-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:74:25-66
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:75:17-77
+58-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:75:27-74
+59
+60                <!--
+61                Enable access to OpenXR on Oculus mobile devices, no-op on other Android
+62                platforms.
+63                -->
+64                <category android:name="com.oculus.intent.category.VR" />
+64-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:79:17-74
+64-->C:\Users\animeman\Documents\Weather App\android\build\AndroidManifest.xml:79:27-71
+65            </intent-filter>
+66        </activity>
+67        <!-- Records the version of the Godot editor used for building -->
+68        <meta-data
+69            android:name="org.godotengine.editor.version"
+70            android:value="3.4.4.stable.mono" /> <!-- Records the version of the Godot library -->
+71        <meta-data
+71-->[godot-lib.debug.aar] C:\Users\animeman\.gradle\caches\transforms-3\58408867a61ae0eb6092dd640ab3ac13\transformed\jetified-godot-lib.debug\AndroidManifest.xml:19:9-21:44
+72            android:name="org.godotengine.library.version"
+72-->[godot-lib.debug.aar] C:\Users\animeman\.gradle\caches\transforms-3\58408867a61ae0eb6092dd640ab3ac13\transformed\jetified-godot-lib.debug\AndroidManifest.xml:20:13-59
+73            android:value="3.4.4.stable" />
+73-->[godot-lib.debug.aar] C:\Users\animeman\.gradle\caches\transforms-3\58408867a61ae0eb6092dd640ab3ac13\transformed\jetified-godot-lib.debug\AndroidManifest.xml:21:13-41
+74
+75        <service android:name="org.godotengine.godot.GodotDownloaderService" />
+75-->[godot-lib.debug.aar] C:\Users\animeman\.gradle\caches\transforms-3\58408867a61ae0eb6092dd640ab3ac13\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:9-80
+75-->[godot-lib.debug.aar] C:\Users\animeman\.gradle\caches\transforms-3\58408867a61ae0eb6092dd640ab3ac13\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:18-77
+76
+77        <meta-data
+77-->[LocationPlugin.debug.aar] C:\Users\animeman\.gradle\caches\transforms-3\03b66004eeaeb164c17298c9da4c1ec1\transformed\jetified-LocationPlugin.debug\AndroidManifest.xml:21:9-23:79
+78            android:name="org.godotengine.plugin.v1.LocationPlugin"
+78-->[LocationPlugin.debug.aar] C:\Users\animeman\.gradle\caches\transforms-3\03b66004eeaeb164c17298c9da4c1ec1\transformed\jetified-LocationPlugin.debug\AndroidManifest.xml:22:13-68
+79            android:value="com.cacaosd.locationplugin.LocationKotlinPlugin" />
+79-->[LocationPlugin.debug.aar] C:\Users\animeman\.gradle\caches\transforms-3\03b66004eeaeb164c17298c9da4c1ec1\transformed\jetified-LocationPlugin.debug\AndroidManifest.xml:23:13-76
+80
+81        <activity
+81-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\animeman\.gradle\caches\transforms-3\92d13517868656389f34f11ca8f9907a\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+82            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+82-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\animeman\.gradle\caches\transforms-3\92d13517868656389f34f11ca8f9907a\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+83            android:exported="false"
+83-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\animeman\.gradle\caches\transforms-3\92d13517868656389f34f11ca8f9907a\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+84            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+84-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\animeman\.gradle\caches\transforms-3\92d13517868656389f34f11ca8f9907a\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+85
+86        <meta-data
+86-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\animeman\.gradle\caches\transforms-3\250cd1252705ee790b8b2d7fb19d43d9\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+87            android:name="com.google.android.gms.version"
+87-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\animeman\.gradle\caches\transforms-3\250cd1252705ee790b8b2d7fb19d43d9\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+88            android:value="@integer/google_play_services_version" />
+88-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\animeman\.gradle\caches\transforms-3\250cd1252705ee790b8b2d7fb19d43d9\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+89    </application>
+90
+91</manifest>

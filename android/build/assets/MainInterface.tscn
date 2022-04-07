@@ -1,0 +1,175 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://HourlyForcast.tscn" type="PackedScene" id=1]
+[ext_resource path="res://WeatherDayShort.tscn" type="PackedScene" id=2]
+[ext_resource path="res://MainInterface.cs" type="Script" id=3]
+[ext_resource path="res://WeatherIcons/PartlyCloudy.png" type="Texture" id=4]
+[ext_resource path="res://WeatherIcons/Moon.png" type="Texture" id=5]
+[ext_resource path="res://WeatherIcons/sun.png" type="Texture" id=6]
+[ext_resource path="res://BebasNeue-Regular.otf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 7 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+Label/fonts/font = null
+
+[sub_resource type="DynamicFont" id=4]
+size = 47
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 145
+font_data = ExtResource( 7 )
+
+[node name="MainInterface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 2 )
+script = ExtResource( 3 )
+WeatherDailyShort = ExtResource( 2 )
+HourlyForcastObject = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 600.0
+margin_bottom = 679.0
+
+[node name="Title" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Title"]
+margin_left = 51.5921
+margin_top = 7.17479
+margin_right = 592.592
+margin_bottom = 43.1748
+custom_fonts/font = SubResource( 4 )
+text = "Detroit"
+
+[node name="WeatherBox" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 600.0
+margin_bottom = 464.0
+rect_min_size = Vector2( 600, 400 )
+mouse_filter = 2
+
+[node name="Temp" type="Label" parent="ScrollContainer/VBoxContainer/WeatherBox"]
+margin_left = 93.9975
+margin_top = 38.3429
+margin_right = 209.998
+margin_bottom = 213.343
+custom_fonts/font = SubResource( 3 )
+text = "89"
+
+[node name="WeatherIcon" type="TextureRect" parent="ScrollContainer/VBoxContainer/WeatherBox"]
+margin_left = 365.0
+margin_top = 33.0
+margin_right = 543.0
+margin_bottom = 197.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Weather Desc" type="Label" parent="ScrollContainer/VBoxContainer/WeatherBox"]
+margin_left = 392.0
+margin_top = 207.0
+margin_right = 576.0
+margin_bottom = 232.0
+text = "Clouds"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DayTimeText" type="Label" parent="ScrollContainer/VBoxContainer/WeatherBox"]
+margin_left = 437.762
+margin_top = 280.598
+margin_right = 512.762
+margin_bottom = 316.598
+text = "Clouds"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NightTimeText" type="Label" parent="ScrollContainer/VBoxContainer/WeatherBox"]
+margin_left = 437.762
+margin_top = 350.9
+margin_right = 512.762
+margin_bottom = 386.9
+text = "Clouds"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DayTimeTexture2" type="TextureRect" parent="ScrollContainer/VBoxContainer/WeatherBox"]
+margin_left = 364.0
+margin_top = 261.0
+margin_right = 446.0
+margin_bottom = 340.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NightTimeTexture" type="TextureRect" parent="ScrollContainer/VBoxContainer/WeatherBox"]
+margin_left = 333.0
+margin_top = 330.0
+margin_right = 428.0
+margin_bottom = 428.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="7 Day Forcast Label" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 468.0
+margin_right = 600.0
+margin_bottom = 504.0
+rect_min_size = Vector2( 0, 36 )
+mouse_filter = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/7 Day Forcast Label"]
+margin_left = 67.0
+margin_top = 4.0
+margin_right = 600.0
+margin_bottom = 40.0
+text = "7 Day Forcast"
+
+[node name="DailyWeatherShortBox" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 508.0
+margin_right = 600.0
+margin_bottom = 615.0
+rect_min_size = Vector2( 0, 107 )
+mouse_filter = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/DailyWeatherShortBox"]
+margin_left = 22.0
+margin_top = 17.0
+margin_right = 580.0
+margin_bottom = 124.0
+custom_constants/separation = 80
+
+[node name="Hour Forcast Label" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 619.0
+margin_right = 600.0
+margin_bottom = 679.0
+rect_min_size = Vector2( 0, 60 )
+mouse_filter = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Hour Forcast Label"]
+margin_left = 74.0787
+margin_top = 19.3188
+margin_right = 207.079
+margin_bottom = 55.3188
+text = "Hour Forcast"
