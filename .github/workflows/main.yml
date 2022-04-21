@@ -24,6 +24,21 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+          check-latest: true
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
+
+      - name: Build SampleApplication
+        run: ./gradlew --no-daemon build
+      
+      
       - name: Build Godot
         # You may pin to the exact commit or the version.
         # uses: josephbmanley/build-godot-action@11589640849ce5bd1bab945c694bb418cb06cb15
