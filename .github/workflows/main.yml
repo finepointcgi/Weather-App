@@ -36,20 +36,14 @@ jobs:
         uses: android-actions/setup-android@v2
 
       
-      - name: Build Godot
-        # You may pin to the exact commit or the version.
-        # uses: josephbmanley/build-godot-action@11589640849ce5bd1bab945c694bb418cb06cb15
-        uses: josephbmanley/build-godot-action@v1.4.1
+      - name: export game
+        # Use latest version (see releases for all versions)
+        uses: firebelley/godot-export@v3.0.0
         with:
-          # Name of the exported binary
-          name: test
-          # Name of the preset in `export_presets.cfg` to use
-          preset: Android
-          # Optional name of the subdirectory to put exported project in
-          #subdirectory: # optional, default is 
-          # Set true to output an artifact zip file
-          #package: # optional
-          # Location of Godot project in repository
-          #projectDir: # optional, default is .
-          # Whether or not to use `--export-debug`
-          debugMode: true # optional
+          # Defining all the required inputs
+          # I used the mono version of Godot in this example
+          godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/3.3/rc9/mono/Godot_v3.3-rc9_mono_linux_headless_64.zip
+          godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/3.3/rc9/mono/Godot_v3.3-rc9_mono_export_templates.tpz
+          relative_project_path: ./
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
